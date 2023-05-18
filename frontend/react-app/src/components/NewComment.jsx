@@ -1,41 +1,13 @@
-function addNew() {
-  var date = new Date();
-  var usernameInput = document.getElementById("inputUsername");
-  var username = usernameInput.value;
-  var countryInput = document.getElementById("inputCountry");
-  var country = countryInput.value;
-  var commentInput = document.getElementById("inputMessage");
-  var comment = commentInput.value;
-
-  var content = {
-    username: username,
-    country: country,
-    message: comment,
-    date: date,
-  };
-
-  var uri = "http://localhost:8080/api/add";
-
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", uri, true);
-
-  xhttp.onreadystatechange = function () {
-    console.log("vittu");
-  };
-
-  xhttp.send(JSON.stringify(content));
-
-  username = "";
-  country = "";
-  comment = "";
-}
-
 function NewComment() {
   return (
     <>
       <h2>New Comment</h2>
       <div className="container">
-        <form class="row g-3">
+        <form
+          class="row g-3"
+          action="http://localhost:8080/api/add"
+          method="post"
+        >
           <div class="col-md-6">
             <input
               type="text"
@@ -57,7 +29,7 @@ function NewComment() {
           <div class="col-12">
             <input
               type="text"
-              name="your-comment"
+              name="comment"
               class="form-control"
               id="inputMessage"
               placeholder="Write your comment here..."
@@ -65,9 +37,8 @@ function NewComment() {
           </div>
           <div class="col-12">
             <button
-              onClick={addNew}
-              type="button"
-              name="submit-button"
+              //onClick={addNew}
+              type="submit"
               class="btn btn-secondary"
               id="submit"
             >

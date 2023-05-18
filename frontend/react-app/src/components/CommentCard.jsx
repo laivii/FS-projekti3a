@@ -18,8 +18,6 @@ function MakeCards(data) {
   for (let i = 0; i < messages.length; i++) {
     var info = messages[i];
     var date = JSON.stringify(info["date"]);
-    var pvm = date.substring(1, 10);
-    var time = date.substring(12, 20);
 
     cards += `
       <div class="col-sm-6">
@@ -34,7 +32,7 @@ function MakeCards(data) {
                   <textarea id="message" class="card-text" disabled>${info["message"]}</textarea>
               </div>
               <div class="card-footer">
-                  <p class="mb-2 text-muted"> <span id="updated" class="hidden">updated</span> ${pvm} ${time}</p>
+                  <p class="mb-2 text-muted"> <span id="updated" class="hidden">updated</span> ${date}</p>
               </div>
           </div>
       </div>`;

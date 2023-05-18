@@ -63,12 +63,13 @@ app.get( '/api/:id', async ( req, res ) => {
 //Uuden dokumentin lisääminen
 app.post( '/api/add', async ( req, res ) => {
     var content = req.body;
+    var date = new Date;
 
     var newMessage = new Message({
         username : content.username,
         country : content.country,
-        message : content.message,
-        date : content.date
+        message : content.comment,
+        date : date
     });
 
     newMessage.save().then(() => {
@@ -77,7 +78,7 @@ app.post( '/api/add', async ( req, res ) => {
         console.log( error );
     });
 
-    res.set("location", "/");
+    res.set('location', 'http://localhost:5173')
     res.status( 301 ).send();
     return;
 });
@@ -95,7 +96,7 @@ app.put( '/api/update/:id', async ( req, res ) => {
             console.log( error );
         });
     
-    res.set("location", "/");
+    res.set("location", "http://localhost:5173");
     res.status( 200 ).send();
     return;
 });
