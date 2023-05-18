@@ -36,12 +36,7 @@ function NewComment() {
             ></input>
           </div>
           <div class="col-12">
-            <button
-              //onClick={addNew}
-              type="submit"
-              class="btn btn-secondary"
-              id="submit"
-            >
+            <button type="submit" class="btn btn-secondary" id="submit">
               Submit
             </button>
           </div>
