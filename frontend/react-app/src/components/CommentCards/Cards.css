@@ -1,0 +1,31 @@
+.card {
+    text-align: left;
+    margin: 2%;
+}
+
+.card-body {
+    color: #111;
+    text-align: left;
+}
+
+.card-header {
+    text-align: left;
+    vertical-align: middle;
+    color: #555;
+}
+
+.card-footer {
+    text-align: right;
+    font-size: 12px;
+    color: #555;
+}
+
+textarea:disabled {
+    border: none;
+    background: none;
+    resize: none;
+}
+
+textarea {
+    resize: none;
+}

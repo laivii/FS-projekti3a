@@ -1,3 +1,6 @@
+//Jomponentti hakukenttää varten
+
+//Funktio tietokanta pyynnölle
 function SearchComment() {
   var search = document.getElementById("searchInput");
   var searchValue = search.value;
@@ -18,6 +21,7 @@ function SearchComment() {
   search.value = "";
 }
 
+//Funktio hakukentän html:lle
 function Search() {
   return (
     <>

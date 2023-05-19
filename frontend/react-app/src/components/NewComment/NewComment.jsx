@@ -1,3 +1,5 @@
+//Komponentti formiin, jolla luodaan uusikommentti
+
 function NewComment() {
   return (
     <>

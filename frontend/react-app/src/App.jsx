@@ -1,8 +1,8 @@
 //Components
-import Header from "./components/Header";
-import NewComment from "./components/NewComment";
-import Search from "./components/Search";
-import Cards from "./components/CommentCard";
+import Header from "./components/Header/Header";
+import NewComment from "./components/NewComment/NewComment";
+import Search from "./components/Search/Search";
+import Cards from "./components/CommentCards/CommentCard";
 
 //Main fuction
 function App() {

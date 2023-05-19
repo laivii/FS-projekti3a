@@ -1,3 +1,7 @@
+//Komponentti kommettien korteille
+import "./Cards.css";
+
+//Funktio tiedon hakua varten
 function getInfo() {
   var xhttp = new XMLHttpRequest();
   xhttp.open("GET", "http://localhost:8080/api/getall", true);
@@ -11,6 +15,7 @@ function getInfo() {
   xhttp.send();
 }
 
+//Funktio korttien luomista varten
 function MakeCards(data) {
   var messages = data;
   var cards = "<div class='row'>";
@@ -45,6 +50,7 @@ function MakeCards(data) {
   return cards;
 }
 
+//Funktio, jossa kutsutaan tietojen hakua§
 function Cards() {
   getInfo();
 }
