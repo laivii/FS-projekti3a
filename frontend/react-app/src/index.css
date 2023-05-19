@@ -2,16 +2,16 @@
 
 @font-face {
     font-family: 'Bangers';
-    src: url('/public/fonts/Bangers-Regular.ttf');
+    src: url('/fonts/Bangers-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Komika';
-    src: url('/public/fonts/komika.hand.ttf');
+    src: url('/fonts/komika.hand.ttf');
 }
 
 body {
-    width: 60%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     background-color: #111;
@@ -66,4 +66,16 @@ input:hover {
 .save {
     float: right;
     cursor: pointer;
+}
+
+@media (orientation: portrait) {
+    [ class*='col-' ] {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        width: 90%;
+    }
 }

@@ -16,6 +16,7 @@ function NewComment() {
               name="username"
               class="form-control"
               id="inputUsername"
+              autoComplete="username"
               placeholder="Username"
             ></input>
           </div>
@@ -25,6 +26,7 @@ function NewComment() {
               name="country"
               class="form-control"
               id="inputCountry"
+              autoComplete="country"
               placeholder="Country"
             ></input>
           </div>

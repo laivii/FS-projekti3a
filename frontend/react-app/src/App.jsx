@@ -11,10 +11,10 @@ function App() {
       <header>
         <Header />
       </header>
-      <div className="container">
+      <div className="container" id="commentForm">
         <NewComment />
       </div>
-      <div className="container">
+      <div className="container" id="searchBar">
         <Search />
       </div>
       <div className="container" id="forum"></div>
