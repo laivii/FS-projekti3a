@@ -1,0 +1,100 @@
+* { box-sizing: border-box;}
+
+@font-face {
+    font-family: 'Bangers';
+    src: url('/public/fonts/Bangers-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Komika';
+    src: url('/public/fonts/komika.hand.ttf');
+}
+
+body {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #111;
+    color: white;
+    font-family: 'Komika';
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: yellow;
+    font-family: 'Bangers';
+}
+
+header {
+    padding: 3%;
+}
+
+input {
+    padding: 0.5em;
+    border-radius: 3%;
+    width: 100%;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.card {
+    text-align: left;
+    margin: 2%;
+}
+
+.card-body {
+    color: #111;
+    text-align: left;
+}
+
+.card-header {
+    text-align: left;
+    vertical-align: middle;
+    color: #555;
+}
+
+.card-footer {
+    text-align: right;
+    font-size: 12px;
+    color: #555;
+}
+
+.delete {
+    float: right;
+}
+
+.commentator {
+    float: left;
+}
+
+.btn-secondary {
+    background-color: #E5DC33;
+    color:#111;
+}
+
+.hidden {
+    display: none;
+}
+
+.update {
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+
+.save {
+    float: right;
+    cursor: pointer;
+}
+
+textarea:disabled {
+    border: none;
+    background: none;
+    resize: none;
+}
+
+textarea {
+    resize: none;
+}
