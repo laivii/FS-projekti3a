@@ -7,11 +7,6 @@ const app = express();
       app.use( express.json() );
       app.use( express.urlencoded() );
 
-// Configure body-parser middleware with the extended option
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
 //Haetaan ympäristömuuttujat .env tiedostosta
 require( "dotenv" ).config();
 

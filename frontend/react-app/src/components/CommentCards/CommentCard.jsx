@@ -4,11 +4,7 @@ import "./Cards.css";
 //Funktio tiedon hakua varten
 function getInfo() {
   var xhttp = new XMLHttpRequest();
-  xhttp.open(
-    "GET",
-    "https://fs-project3-backend-vl.onrender.com/api/getall",
-    true
-  );
+  xhttp.open("GET", "http://localhost:8080/api/getall", true);
 
   xhttp.onreadystatechange = function () {
     try {
@@ -133,13 +129,13 @@ function Cards() {
 function deleteDocument() {
   var id = this.parentElement.id;
 
-  var uri = "https://fs-project3-backend-vl.onrender.com/api/delete/" + id;
+  var uri = "http://localhost:8080/api/delete/" + id;
 
   var xhttp = new XMLHttpRequest();
   xhttp.open("DELETE", uri, false);
 
   xhttp.onreadystatechange = function () {
-    window.location.href = "https://fs-project3-vl.onrender.com";
+    window.location.href = "http://localhost:5173";
   };
 
   xhttp.send();
@@ -167,8 +163,9 @@ function saveDocument() {
   var element = this_card.querySelector("#message");
 
   var message = element.value;
+  console.log(message);
 
-  var uri = "https://fs-project3.onrender.com/api/update/" + id;
+  var uri = "https://localhost:8080/api/update/" + id;
 
   var xhttp = new XMLHttpRequest();
   xhttp.open("PUT", uri, true);
