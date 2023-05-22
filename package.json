@@ -1,6 +1,0 @@
-{
-    "scripts": {
-        "start": "concurrently \"npm run start:backend\"",
-        "start:backend": "cd backend   && npm install && node index.js"
-    }
-}
