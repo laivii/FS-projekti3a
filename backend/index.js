@@ -49,7 +49,7 @@ app.get( '/api/username/:username', async ( req, res ) => {
     var username = req.params.username;
     var message = await Message.find({ username });
     console.log( 'viestihaettu' );
-    console.log(message)
+    res.send( message )
 
 });
 

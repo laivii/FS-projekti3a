@@ -118,6 +118,8 @@ function MakeCards(data) {
   return cards;
 }
 
+export { MakeCards };
+
 //Funktio, jossa kutsutaan tietojen hakua§
 function Cards() {
   getInfo();

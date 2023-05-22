@@ -1,7 +1,7 @@
 //Components
 import Header from "./components/Header/Header";
 import NewComment from "./components/NewComment/NewComment";
-import Search from "./components/Search/Search";
+import Search from "./components/Search/SearchBar";
 import Cards from "./components/CommentCards/CommentCard";
 
 //Main fuction

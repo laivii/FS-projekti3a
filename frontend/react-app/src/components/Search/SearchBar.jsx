@@ -1,4 +1,5 @@
-//Jomponentti hakukenttää varten
+import { MakeCards } from "../CommentCards/CommentCard";
+//Komponentti hakukenttää varten
 
 //Funktio tietokanta pyynnölle
 function SearchComment() {
@@ -13,7 +14,14 @@ function SearchComment() {
   xhttp.open("GET", uri, false);
 
   xhttp.onreadystatechange = function () {
-    console.log("Tiedon haku onnistu!");
+    var container = document.getElementById("forum");
+    container.innerHTML = "";
+    var data = JSON.parse(xhttp.response);
+
+    console.log(data);
+
+    var content = MakeCards(data);
+    container.appendChild(content);
   };
 
   xhttp.send();
