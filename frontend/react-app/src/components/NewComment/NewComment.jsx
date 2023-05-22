@@ -7,7 +7,7 @@ function NewComment() {
       <div className="container">
         <form
           class="row g-3"
-          action="https://fs-project3.onrender.com/api/add"
+          action="https://fs-project3-backend-vl.onrender.com/api/add"
           method="post"
         >
           <div class="col-md-6">
